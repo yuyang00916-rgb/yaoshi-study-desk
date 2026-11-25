@@ -1,0 +1,3758 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#131d3b">
+  <meta name="description" content="哈尔滨商业大学第三届团支部书记综合素质能力大赛在线练习题库，收录单选、多选、判断、填空共169题。">
+  <title>哈商大第三届团支部书记综合素质能力大赛题库</title>
+  <style>
+:root {
+  color-scheme: light;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  color: #17223a;
+  background: #f2f5fa;
+  --ink: #17223a;
+  --muted: #506078;
+  --line: #dce3ee;
+  --accent: #344dad;
+  --accent-pale: #edf1ff;
+  --green: #17634c;
+  --green-pale: #e8f6ef;
+  --red: #9a302e;
+  --red-pale: #fff0ef;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; min-width: 280px; }
+button, input { font: inherit; }
+button { color: inherit; cursor: pointer; }
+button:disabled { cursor: default; opacity: .55; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #7195f4; outline-offset: 3px; }
+a { color: var(--accent); text-underline-offset: .2em; }
+.frame { width: min(1140px, calc(100% - 64px)); margin-inline: auto; }
+.masthead { background: #131d3b; color: white; position: relative; overflow: hidden; }
+.masthead::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 93% 35%, #37549b 0%, transparent 65%);
+}
+.masthead-inner { position: relative; z-index: 1; padding-block: 35px 41px; }
+.identity { display: flex; align-items: center; gap: 11px; color: #d7e3ff; font-size: .94rem; font-weight: 650; letter-spacing: .08em; }
+.book { position: relative; width: 24px; height: 19px; flex: 0 0 24px; }
+.book::before, .book::after { content: ""; position: absolute; top: 1px; width: 11px; height: 16px; border: 1.5px solid #a8bfff; }
+.book::before { left: 0; border-radius: 3px 5px 0 3px; transform: skewY(8deg); }
+.book::after { right: 0; border-radius: 5px 3px 3px 0; transform: skewY(-8deg); }
+h1 { margin: 14px 0 0; font-size: clamp(1.55rem, 3.5vw, 2.45rem); letter-spacing: .02em; line-height: 1.34; }
+.mobile-break { display: none; }
+.workspace { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; padding-block: 30px 42px; align-items: start; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 3px 12px #24375608; }
+.sidebar { padding: 19px 15px 17px; }
+.sidebar h2 { margin: 0 0 12px; font-size: .9rem; color: var(--muted); font-weight: 650; }
+.filters { display: grid; gap: 4px; }
+.filter { display: flex; justify-content: space-between; align-items: center; gap: 8px; text-align: left; background: transparent; border: 1px solid transparent; border-radius: 8px; padding: 9px 11px; min-height: 40px; font-size: .91rem; }
+.filter-count { font-variant-numeric: tabular-nums; color: var(--muted); }
+.filter:hover { background: #f3f5fa; }
+.filter[aria-pressed="true"] { background: var(--accent-pale); color: #293f99; border-color: #dbe3ff; font-weight: 700; }
+.filter[aria-pressed="true"] .filter-count { color: inherit; }
+.progress-section { margin-top: 17px; border-top: 1px solid var(--line); padding: 16px 3px 0; }
+.progress-numbers { font-size: .91rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.progress-numbers strong { color: var(--ink); font-size: 1.35rem; }
+progress { display: block; width: 100%; height: 8px; margin-block: 9px; appearance: none; border: 0; border-radius: 20px; background: #e9edf6; overflow: hidden; }
+progress::-webkit-progress-bar { background: #e9edf6; }
+progress::-webkit-progress-value { background: #4960c8; }
+progress::-moz-progress-bar { background: #4960c8; }
+.muted, .footnote { color: var(--muted); font-size: .875rem; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
+.segmented { display: flex; gap: 3px; padding: 3px; border: 1px solid #dce3ee; background: #e7ecf6; border-radius: 10px; }
+.segmented button { border: 0; background: transparent; color: var(--muted); font-size: .9rem; font-weight: 650; padding: 7px 16px; border-radius: 7px; min-height: 34px; }
+.segmented button[aria-pressed="true"] { background: #fff; color: #293f99; box-shadow: 0 1px 4px #24375614; }
+.question-card { overflow: hidden; }
+.question-body { padding: 26px 30px 24px; }
+.question-meta { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 14px; }
+.kind { display: inline-block; background: var(--accent-pale); color: #293f99; border-radius: 6px; padding: 5px 9px; font-size: .875rem; font-weight: 700; }
+.position { font-size: .9rem; font-variant-numeric: tabular-nums; color: var(--muted); }
+.prompt { margin: 0 0 20px; font-size: clamp(1.1rem, 2.1vw, 1.35rem); line-height: 1.65; overflow-wrap: anywhere; }
+.prompt:focus { outline: none; }
+.prompt small { font-size: .9rem; color: var(--muted); margin-right: .6em; font-weight: 650; white-space: nowrap; }
+.hint { margin: -8px 0 14px; color: var(--muted); font-size: .9rem; }
+.option-list { display: grid; gap: 9px; }
+.option {
+  display: flex; align-items: center; gap: 12px; width: 100%; padding: 10px 13px; min-height: 53px; text-align: left; line-height: 1.5;
+  border: 1px solid var(--line); border-radius: 9px; background: #fff;
+}
+.option:disabled { opacity: 1; }
+.option:hover:not(:disabled), .button.outline:hover:not(:disabled) { background: #f3f6ff; border-color: #a9b8e9; }
+.option[aria-pressed="true"] { border-color: #6d80d0; background: var(--accent-pale); }
+.option-letter { display: grid; place-items: center; flex: 0 0 29px; min-height: 29px; border-radius: 6px; background: #eef1f8; font-size: .88rem; font-weight: 750; }
+.option.correct { border-color: #79bca4; background: var(--green-pale); }
+.option.wrong { border-color: #d99491; background: var(--red-pale); }
+.option.correct .option-letter { color: var(--green); background: #d4efe1; }
+.option.wrong .option-letter { color: var(--red); background: #fcdbd9; }
+.fill-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(175px, 100%), 1fr)); gap: 12px; }
+.fill-fields label { display: grid; gap: 7px; font-size: .9rem; color: var(--muted); }
+.fill-fields input { width: 100%; min-height: 46px; padding: 10px 12px; border: 1px solid #bcc8dd; border-radius: 8px; color: var(--ink); background: white; }
+.action-row, .navigation { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.action-row { margin-top: 19px; }
+.button { min-height: 40px; border-radius: 8px; border: 1px solid transparent; padding: 8px 15px; font-size: .91rem; font-weight: 650; background: #fff; }
+.button.outline { border-color: var(--line); }
+.button.primary { background: var(--accent); color: #fff; }
+.button.primary:hover:not(:disabled) { background: #293e93; }
+.feedback { margin-top: 16px; padding: 13px 15px; background: #f3f6ff; border: 1px solid #d8e1f9; border-radius: 9px; font-size: .94rem; line-height: 1.65; overflow-wrap: anywhere; }
+.feedback.correct { background: var(--green-pale); border-color: #b7decf; }
+.feedback.wrong { background: var(--red-pale); border-color: #f0c5c1; }
+.feedback p { margin: 6px 0 0; }
+.feedback strong { display: block; }
+.navigation { justify-content: space-between; padding: 13px 30px; border-top: 1px solid var(--line); background: #fafbfe; }
+.footnote { margin: 11px 2px 0; line-height: 1.55; }
+.empty { padding: 32px 30px; }
+.empty h2 { margin: 0 0 10px; font-size: 1.18rem; }
+.empty p { margin: 0 0 16px; color: var(--muted); }
+.map { border-bottom: 1px solid var(--line); padding: 15px 30px 18px; background: #fafbfe; }
+.map-key { display: flex; flex-wrap: wrap; gap: 13px; margin-bottom: 9px; color: var(--muted); font-size: .875rem; }
+.map-key span::before { display: inline-block; vertical-align: .02em; content: ""; width: 9px; height: 9px; border-radius: 3px; border: 1px solid #b5c1d6; background: #fff; margin-right: 5px; }
+.map-key .key-correct::before { background: var(--green-pale); border-color: #79bca4; }
+.map-key .key-wrong::before { background: var(--red-pale); border-color: #d99491; }
+.map-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(42px, 1fr)); gap: 5px; max-height: 210px; overflow-y: auto; padding: 3px; }
+.map-grid button { border: 1px solid var(--line); border-radius: 5px; padding: 6px 0; min-height: 35px; font-size: .875rem; background: white; font-variant-numeric: tabular-nums; }
+.map-grid button.correct { background: var(--green-pale); color: var(--green); border-color: #79bca4; }
+.map-grid button.wrong { background: var(--red-pale); color: var(--red); border-color: #d99491; }
+.map-grid button[aria-current="true"] { box-shadow: inset 0 0 0 2px var(--accent); font-weight: 750; }
+@media (max-width: 760px) {
+  .frame { width: calc(100% - 28px); }
+  .masthead-inner { padding-block: 23px 24px; }
+  .identity { font-size: .88rem; }
+  h1 { margin-top: 10px; }
+  .mobile-break { display: initial; }
+  .workspace { grid-template-columns: minmax(0, 1fr); gap: 14px; padding-top: 15px; }
+  .sidebar { padding: 10px; border-radius: 12px; }
+  .sidebar h2 { margin-bottom: 5px; }
+  .filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .filter { min-height: 36px; padding: 5px 7px; gap: 3px; font-size: .875rem; }
+  .progress-section { display: grid; grid-template-columns: auto auto 1fr auto; align-items: center; gap: 8px; margin-top: 7px; padding: 7px 2px 0; }
+  .progress-section h2 { margin: 0; }
+  .progress-numbers strong { font-size: 1rem; }
+  progress { margin: 0; }
+  .card { border-radius: 12px; }
+  .question-body, .empty { padding: 17px 15px; }
+  .navigation, .map { padding-inline: 15px; }
+  .question-meta { margin-bottom: 10px; }
+}
+</style>
+  
+  
+</head>
+<body>
+  <header class="masthead">
+    <div class="frame masthead-inner">
+      <div class="identity">
+        <span class="book" aria-hidden="true"></span>
+        <span>哈尔滨商业大学</span>
+      </div>
+      <h1>第三届团支部书记<br class="mobile-break">综合素质能力大赛题库</h1>
+    </div>
+  </header>
+  <main class="frame workspace">
+    <aside class="card sidebar" aria-label="练习设置和进度">
+      <div class="side-section">
+        <h2>练习范围</h2>
+        <div class="filters" id="filters" aria-label="选择题型"></div>
+      </div>
+      <div class="side-section progress-section">
+        <h2>总进度</h2>
+        <div class="progress-numbers"><strong id="answered-total">0</strong><span id="total-label"> / 169 题</span></div>
+        <progress id="progress" max="169" value="0" aria-label="全部题目的完成进度"></progress>
+        <div id="score" class="muted">答对 0 题</div>
+      </div>
+    </aside>
+    <section class="exercise" aria-label="答题区">
+      <div class="toolbar">
+        <div class="segmented" id="sequence" aria-label="出题顺序">
+          <button type="button" data-order="ordered" aria-pressed="true">顺序</button>
+          <button type="button" data-order="random" aria-pressed="false">随机</button>
+        </div>
+        <button class="button outline" id="toggle-map" type="button" aria-controls="map" aria-expanded="false">题号导航</button>
+      </div>
+      <div class="card question-card" id="exercise-card">
+        <section id="map" class="map" hidden aria-label="题号导航">
+          <div class="map-key"><span>未做</span><span class="key-correct">答对</span><span class="key-wrong">错题</span></div>
+          <div id="map-grid" class="map-grid"></div>
+        </section>
+        <div id="question"></div>
+      </div>
+      <p class="footnote" id="storage-note">练习进度和错题保存在当前浏览器。</p>
+    </section>
+  </main>
+<script>
+const questions = [
+  {
+    "id": 1,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议的举行时间和地点是（　）。",
+    "options": [
+      [
+        "A",
+        "2026年10月26日至29日在北京"
+      ],
+      [
+        "B",
+        "2026年10月20日至23日在北京"
+      ],
+      [
+        "C",
+        "2025年10月26日至29日在北京"
+      ],
+      [
+        "D",
+        "2026年11月26日至29日在北京"
+      ]
+    ],
+    "answer": "A",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》：全会于2026年10月26日至29日在北京举行。"
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议审议通过了（　）。",
+    "options": [
+      [
+        "A",
+        "《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》"
+      ],
+      [
+        "B",
+        "《中共中央关于持之以恒推进全面从严治党若干重大问题的决定》"
+      ],
+      [
+        "C",
+        "《中共中央关于进一步全面深化改革、推进中国式现代化的决定》"
+      ],
+      [
+        "D",
+        "《中共中央关于党的百年奋斗重大成就和历史经验的决议》"
+      ]
+    ],
+    "answer": "B",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。制定“十五五”规划的建议由二十届四中全会通过。"
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议的聚焦主题是（　）。",
+    "options": [
+      [
+        "A",
+        "生态文明建设"
+      ],
+      [
+        "B",
+        "推动经济高质量发展"
+      ],
+      [
+        "C",
+        "持之以恒推进全面从严治党"
+      ],
+      [
+        "D",
+        "全面依法治国"
+      ]
+    ],
+    "answer": "C",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。全会审议通过的决定以全面从严治党为主题。"
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，新时代管党治党、兴党强党伟大实践中形成的重大理论成果是（　）。",
+    "options": [
+      [
+        "A",
+        "习近平经济思想"
+      ],
+      [
+        "B",
+        "习近平文化思想"
+      ],
+      [
+        "C",
+        "习近平生态文明思想"
+      ],
+      [
+        "D",
+        "习近平党建思想"
+      ]
+    ],
+    "answer": "D",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》：“形成习近平党建思想。”"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，增强党性是全面从严治党的（　）。",
+    "options": [
+      [
+        "A",
+        "根本性任务"
+      ],
+      [
+        "B",
+        "基本要求"
+      ],
+      [
+        "C",
+        "长期目标"
+      ],
+      [
+        "D",
+        "重要保障"
+      ]
+    ],
+    "answer": "A",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》：“增强党性是全面从严治党的根本性任务。”"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，（　）是党的根本组织原则和领导制度。",
+    "options": [
+      [
+        "A",
+        "民主生活会制度"
+      ],
+      [
+        "B",
+        "民主集中制"
+      ],
+      [
+        "C",
+        "集体领导制"
+      ],
+      [
+        "D",
+        "请示报告制度"
+      ]
+    ],
+    "answer": "B",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，全面从严治党关键在（　）。",
+    "options": [
+      [
+        "A",
+        "制度治党"
+      ],
+      [
+        "B",
+        "以上率下"
+      ],
+      [
+        "C",
+        "从严治吏"
+      ],
+      [
+        "D",
+        "正风肃纪"
+      ]
+    ],
+    "answer": "C",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，全面从严治党的主体是（　）。",
+    "options": [
+      [
+        "A",
+        "领导干部"
+      ],
+      [
+        "B",
+        "全体党员"
+      ],
+      [
+        "C",
+        "纪检监察机关"
+      ],
+      [
+        "D",
+        "党的各级组织"
+      ]
+    ],
+    "answer": "D",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，加强党内法规制度建设是全面从严治党的（　）。",
+    "options": [
+      [
+        "A",
+        "长远之策、根本之策"
+      ],
+      [
+        "B",
+        "基础工程"
+      ],
+      [
+        "C",
+        "关键举措"
+      ],
+      [
+        "D",
+        "重要保障"
+      ]
+    ],
+    "answer": "A",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，一体推进不敢腐、不能腐、不想腐是（　）。",
+    "options": [
+      [
+        "A",
+        "全面从严治党的根本任务"
+      ],
+      [
+        "B",
+        "全面从严治党的重要方略和反腐败斗争的基本方针"
+      ],
+      [
+        "C",
+        "党内监督的基本方式"
+      ],
+      [
+        "D",
+        "作风建设的核心要求"
+      ]
+    ],
+    "answer": "B",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议决定，中国共产党第二十一次全国代表大会于（　）召开。",
+    "options": [
+      [
+        "A",
+        "2027年下半年在上海"
+      ],
+      [
+        "B",
+        "2027年上半年在北京"
+      ],
+      [
+        "C",
+        "2027年下半年在北京"
+      ],
+      [
+        "D",
+        "2028年上半年在北京"
+      ]
+    ],
+    "answer": "C",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议对当前发展形势的判断是（　）。",
+    "options": [
+      [
+        "A",
+        "“十三五”圆满收官，“十四五”开局良好"
+      ],
+      [
+        "B",
+        "“十四五”开局良好，“十五五”刚刚启动"
+      ],
+      [
+        "C",
+        "“十五五”圆满收官，“十六五”开局良好"
+      ],
+      [
+        "D",
+        "“十四五”圆满收官，“十五五”开局良好"
+      ]
+    ],
+    "answer": "D",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，正风肃纪是全面从严治党的（　）。",
+    "options": [
+      [
+        "A",
+        "有力举措"
+      ],
+      [
+        "B",
+        "基础工程"
+      ],
+      [
+        "C",
+        "首要任务"
+      ],
+      [
+        "D",
+        "根本保证"
+      ]
+    ],
+    "answer": "A",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议听取和讨论了（　）。",
+    "options": [
+      [
+        "A",
+        "全国人大常委会工作报告"
+      ],
+      [
+        "B",
+        "习近平受中央政治局委托所作的工作报告"
+      ],
+      [
+        "C",
+        "中央纪律检查委员会工作报告"
+      ],
+      [
+        "D",
+        "国务院政府工作报告"
+      ]
+    ],
+    "answer": "B",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议强调，持之以恒推进全面从严治党要以（　）为根本。",
+    "options": [
+      [
+        "A",
+        "党的纪律处分条例"
+      ],
+      [
+        "B",
+        "党内监督条例"
+      ],
+      [
+        "C",
+        "党章"
+      ],
+      [
+        "D",
+        "宪法"
+      ]
+    ],
+    "answer": "C",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》：“以党章为根本。”"
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "prompt": "2026年3月，新华社报道《关于加强党建带团建工作的意见》，印发该文件的机关是（　）。",
+    "options": [
+      [
+        "A",
+        "共青团中央"
+      ],
+      [
+        "B",
+        "中央组织部"
+      ],
+      [
+        "C",
+        "国务院办公厅"
+      ],
+      [
+        "D",
+        "中共中央办公厅"
+      ]
+    ],
+    "answer": "D",
+    "basis": "新华社2026年3月20日电：中共中央办公厅印发了《关于加强党建带团建工作的意见》。"
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "prompt": "《关于加强党建带团建工作的意见》提出，加强党建带团建工作要坚持（　）原则。",
+    "options": [
+      [
+        "A",
+        "党管青年工作"
+      ],
+      [
+        "B",
+        "党建先行"
+      ],
+      [
+        "C",
+        "团建自主"
+      ],
+      [
+        "D",
+        "青年优先发展"
+      ]
+    ],
+    "answer": "A",
+    "basis": "新华社2026年3月20日电：“坚持和加强党对共青团的领导，坚持党管青年工作原则。”"
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "prompt": "《关于加强党建带团建工作的意见》提出，要贯通（　）一体化育人链条。",
+    "options": [
+      [
+        "A",
+        "小学、中学、大学"
+      ],
+      [
+        "B",
+        "党、团、队"
+      ],
+      [
+        "C",
+        "团、队、班"
+      ],
+      [
+        "D",
+        "学校、家庭、社会"
+      ]
+    ],
+    "answer": "B",
+    "basis": "新华社2026年3月20日电：“贯通党、团、队一体化育人链条。”"
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "prompt": "《关于加强党建带团建工作的意见》明确，共青团受同级党委和上级团组织双重领导，以（　）为主。",
+    "options": [
+      [
+        "A",
+        "上级党委领导"
+      ],
+      [
+        "B",
+        "上级团组织领导"
+      ],
+      [
+        "C",
+        "同级党委领导"
+      ],
+      [
+        "D",
+        "同级团组织领导"
+      ]
+    ],
+    "answer": "C",
+    "basis": "新华社2026年3月20日电：“坚持共青团受同级党委和上级团组织双重领导、以同级党委领导为主的组织领导体制。”"
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "prompt": "《关于加强党建带团建工作的意见》要求，带动共青团进一步增强政治性、先进性、（　）。",
+    "options": [
+      [
+        "A",
+        "实践性"
+      ],
+      [
+        "B",
+        "时代性"
+      ],
+      [
+        "C",
+        "创造性"
+      ],
+      [
+        "D",
+        "群众性"
+      ]
+    ],
+    "answer": "D",
+    "basis": "新华社2026年3月20日电。"
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "prompt": "《关于加强党建带团建工作的意见》要求，提升共青团组织的引领力、组织力和（　）。",
+    "options": [
+      [
+        "A",
+        "服务力"
+      ],
+      [
+        "B",
+        "执行力"
+      ],
+      [
+        "C",
+        "凝聚力"
+      ],
+      [
+        "D",
+        "战斗力"
+      ]
+    ],
+    "answer": "A",
+    "basis": "新华社2026年3月20日电。"
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "prompt": "《关于加强党建带团建工作的意见》提出，健全符合群团组织特点的干部管理方式和（　）相结合的团干部队伍管理制度。",
+    "options": [
+      [
+        "A",
+        "固定、流动、临时"
+      ],
+      [
+        "B",
+        "专职、挂职、兼职"
+      ],
+      [
+        "C",
+        "专职、兼职、志愿"
+      ],
+      [
+        "D",
+        "选任、聘任、委任"
+      ]
+    ],
+    "answer": "B",
+    "basis": "新华社2026年3月20日电。"
+  },
+  {
+    "id": 23,
+    "type": "single",
+    "prompt": "《关于加强党建带团建工作的意见》强调，要把团建纳入党建工作规划和（　）内容。",
+    "options": [
+      [
+        "A",
+        "阵地建设"
+      ],
+      [
+        "B",
+        "干部配备"
+      ],
+      [
+        "C",
+        "考核评价"
+      ],
+      [
+        "D",
+        "经费保障"
+      ]
+    ],
+    "answer": "C",
+    "basis": "新华社2026年3月20日电：“把团建纳入党建工作规划和考核评价内容。”"
+  },
+  {
+    "id": 24,
+    "type": "single",
+    "prompt": "《关于加强党建带团建工作的意见》要求，共青团要履行好（　）责任。",
+    "options": [
+      [
+        "A",
+        "全团抓基层"
+      ],
+      [
+        "B",
+        "全团抓学习"
+      ],
+      [
+        "C",
+        "全团服务青年"
+      ],
+      [
+        "D",
+        "全团带队"
+      ]
+    ],
+    "answer": "D",
+    "basis": "新华社2026年3月20日电：“加强对少先队工作的领导，指导共青团履行好全团带队责任。”"
+  },
+  {
+    "id": 25,
+    "type": "single",
+    "prompt": "2026年是中国共产党成立（　）周年。",
+    "options": [
+      [
+        "A",
+        "105"
+      ],
+      [
+        "B",
+        "110"
+      ],
+      [
+        "C",
+        "100"
+      ],
+      [
+        "D",
+        "104"
+      ]
+    ],
+    "answer": "A",
+    "basis": "中国共产党成立于1921年7月，2026－1921＝105。"
+  },
+  {
+    "id": 26,
+    "type": "single",
+    "prompt": "2026年是红军长征胜利（　）周年。",
+    "options": [
+      [
+        "A",
+        "85"
+      ],
+      [
+        "B",
+        "90"
+      ],
+      [
+        "C",
+        "95"
+      ],
+      [
+        "D",
+        "100"
+      ]
+    ],
+    "answer": "B",
+    "basis": "1936年10月，红军三大主力胜利会师，标志着长征胜利结束；2026－1936＝90。"
+  },
+  {
+    "id": 27,
+    "type": "single",
+    "prompt": "1935年1月召开的（　），事实上确立了毛泽东同志在党中央和红军中的领导地位。",
+    "options": [
+      [
+        "A",
+        "八七会议"
+      ],
+      [
+        "B",
+        "古田会议"
+      ],
+      [
+        "C",
+        "遵义会议"
+      ],
+      [
+        "D",
+        "瓦窑堡会议"
+      ]
+    ],
+    "answer": "C",
+    "basis": "遵义会议于1935年1月在贵州遵义召开，是党的历史上一个生死攸关的转折点。"
+  },
+  {
+    "id": 28,
+    "type": "single",
+    "prompt": "2025年9月3日，我国举行了（　）。",
+    "options": [
+      [
+        "A",
+        "纪念红军长征胜利90周年大会"
+      ],
+      [
+        "B",
+        "庆祝中华人民共和国成立75周年大会"
+      ],
+      [
+        "C",
+        "庆祝中国共产党成立100周年大会"
+      ],
+      [
+        "D",
+        "纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会"
+      ]
+    ],
+    "answer": "D",
+    "basis": "2025年9月3日，纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会在北京举行。"
+  },
+  {
+    "id": 29,
+    "type": "single",
+    "prompt": "2026年是五四运动（　）周年。",
+    "options": [
+      [
+        "A",
+        "107"
+      ],
+      [
+        "B",
+        "100"
+      ],
+      [
+        "C",
+        "105"
+      ],
+      [
+        "D",
+        "106"
+      ]
+    ],
+    "answer": "A",
+    "basis": "五四运动爆发于1919年5月4日，2026－1919＝107。"
+  },
+  {
+    "id": 30,
+    "type": "single",
+    "prompt": "中国共产主义青年团成立于1922年，2026年是其成立（　）周年。",
+    "options": [
+      [
+        "A",
+        "102"
+      ],
+      [
+        "B",
+        "104"
+      ],
+      [
+        "C",
+        "110"
+      ],
+      [
+        "D",
+        "100"
+      ]
+    ],
+    "answer": "B",
+    "basis": "1922年5月，中国社会主义青年团第一次全国代表大会在广州召开；2026－1922＝104。"
+  },
+  {
+    "id": 31,
+    "type": "single",
+    "prompt": "2026年是“十五五”规划的（　）。",
+    "options": [
+      [
+        "A",
+        "中期评估之年"
+      ],
+      [
+        "B",
+        "总结验收之年"
+      ],
+      [
+        "C",
+        "开局之年"
+      ],
+      [
+        "D",
+        "收官之年"
+      ]
+    ],
+    "answer": "C",
+    "basis": "“十五五”规划期为2026年至2030年，2026年为其第一年。"
+  },
+  {
+    "id": 32,
+    "type": "single",
+    "prompt": "表决通过关于“十五五”规划纲要决议的会议是（　）。",
+    "options": [
+      [
+        "A",
+        "党的二十届五中全会"
+      ],
+      [
+        "B",
+        "党的二十届四中全会"
+      ],
+      [
+        "C",
+        "十四届全国政协四次会议"
+      ],
+      [
+        "D",
+        "十四届全国人大四次会议"
+      ]
+    ],
+    "answer": "D",
+    "basis": "新华社2026年3月12日电：十四届全国人大四次会议表决通过关于国民经济和社会发展第十五个五年规划纲要的决议。"
+  },
+  {
+    "id": 33,
+    "type": "single",
+    "prompt": "2026年《政府工作报告》提出的经济增长预期目标是（　）。",
+    "options": [
+      [
+        "A",
+        "4.5%—5%"
+      ],
+      [
+        "B",
+        "5%以上"
+      ],
+      [
+        "C",
+        "5%左右"
+      ],
+      [
+        "D",
+        "4%左右"
+      ]
+    ],
+    "answer": "A",
+    "basis": "2026年3月5日《政府工作报告》：“经济增长4.5%—5%，在实际工作中努力争取更好结果。”"
+  },
+  {
+    "id": 34,
+    "type": "single",
+    "prompt": "党的二十届四中全会提出，到2035年，我国人均国内生产总值达到（　）水平。",
+    "options": [
+      [
+        "A",
+        "发达国家"
+      ],
+      [
+        "B",
+        "中等发达国家"
+      ],
+      [
+        "C",
+        "世界平均水平"
+      ],
+      [
+        "D",
+        "初等发达国家"
+      ]
+    ],
+    "answer": "B",
+    "basis": "《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》第（6）条。"
+  },
+  {
+    "id": 35,
+    "type": "single",
+    "prompt": "中国共产主义青年团是中国共产党领导的先进青年的（　），是广大青年在实践中学习中国特色社会主义和共产主义的学校，是中国共产党的助手和后备军。",
+    "options": [
+      [
+        "A",
+        "社会组织"
+      ],
+      [
+        "B",
+        "联合团体"
+      ],
+      [
+        "C",
+        "群团组织"
+      ],
+      [
+        "D",
+        "政治组织"
+      ]
+    ],
+    "answer": "C",
+    "basis": "《中国共产主义青年团章程》总则。"
+  },
+  {
+    "id": 36,
+    "type": "single",
+    "prompt": "团章规定，对团员的纪律处分共有（　）种。",
+    "options": [
+      [
+        "A",
+        "六"
+      ],
+      [
+        "B",
+        "三"
+      ],
+      [
+        "C",
+        "四"
+      ],
+      [
+        "D",
+        "五"
+      ]
+    ],
+    "answer": "D",
+    "basis": "《中国共产主义青年团章程》第六章“团的纪律”：警告、严重警告、撤销团内职务、留团察看、开除团籍。"
+  },
+  {
+    "id": 37,
+    "type": "single",
+    "prompt": "学生团员（包括无工资收入的研究生团员）每月交纳团费的数额为（　）。",
+    "options": [
+      [
+        "A",
+        "1角"
+      ],
+      [
+        "B",
+        "2角"
+      ],
+      [
+        "C",
+        "5角"
+      ],
+      [
+        "D",
+        "1元"
+      ]
+    ],
+    "answer": "B",
+    "basis": "共青团中央《关于团费收缴、使用和管理的规定》。"
+  },
+  {
+    "id": 38,
+    "type": "single",
+    "prompt": "“三会两制一课”中的“一课”是指（　）。",
+    "options": [
+      [
+        "A",
+        "党课"
+      ],
+      [
+        "B",
+        "团课"
+      ],
+      [
+        "C",
+        "主题团日"
+      ],
+      [
+        "D",
+        "形势政策课"
+      ]
+    ],
+    "answer": "B",
+    "basis": "《中国共产主义青年团基层组织“三会两制一课”制度实施细则》。"
+  },
+  {
+    "id": 39,
+    "type": "single",
+    "prompt": "“智慧团建”是（　）建设的全国统一的团务管理信息系统。",
+    "options": [
+      [
+        "A",
+        "各省团委自行"
+      ],
+      [
+        "B",
+        "学校自行"
+      ],
+      [
+        "C",
+        "共青团中央"
+      ],
+      [
+        "D",
+        "教育部"
+      ]
+    ],
+    "answer": "C",
+    "basis": "“智慧团建”系统由共青团中央统一建设，用于团员信息管理、组织关系转接、团费管理、团内统计等业务。"
+  },
+  {
+    "id": 40,
+    "type": "single",
+    "prompt": "“推优”是指（　）。",
+    "options": [
+      [
+        "A",
+        "推荐优秀团员担任团干部"
+      ],
+      [
+        "B",
+        "推荐优秀团员参评奖学金"
+      ],
+      [
+        "C",
+        "推荐优秀团支部参加评选"
+      ],
+      [
+        "D",
+        "推荐优秀共青团员作党的发展对象"
+      ]
+    ],
+    "answer": "D",
+    "basis": "《共青团推优入党工作实施办法》。"
+  },
+  {
+    "id": 41,
+    "type": "single",
+    "prompt": "《中国共产主义青年团基层组织选举规则》规定，团的支部委员会、总支委员会由团员大会选举产生，每届任期（　）年。",
+    "options": [
+      [
+        "A",
+        "3-5年"
+      ],
+      [
+        "B",
+        "1年"
+      ],
+      [
+        "C",
+        "2年"
+      ],
+      [
+        "D",
+        "3年"
+      ]
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 42,
+    "type": "single",
+    "prompt": "《中国共产主义青年团基层组织选举规则》规定，党团组织提名为团的委员会成员候选人或团的代表大会代表候选人的（　）在团内有被选举权。",
+    "options": [
+      [
+        "A",
+        "中国共产党党员"
+      ],
+      [
+        "B",
+        "民主党派人士"
+      ],
+      [
+        "C",
+        "无党派人士"
+      ],
+      [
+        "D",
+        "满18周岁的中国公民"
+      ]
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 43,
+    "type": "single",
+    "prompt": "《中国共产主义青年团基层组织选举规则》规定，团的支部委员会一般由（　）组成,设书记一人,必要时可设副书记一人。",
+    "options": [
+      [
+        "A",
+        "3—5人"
+      ],
+      [
+        "B",
+        "3人"
+      ],
+      [
+        "C",
+        "5人"
+      ],
+      [
+        "D",
+        "5人以上"
+      ]
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 44,
+    "type": "single",
+    "prompt": "《中国共产主义青年团基层组织选举规则》规定，团员大会、团的代表大会和团的基层委员会有选举权的到会人数超过应到会人数的（　）方可进行选举。",
+    "options": [
+      [
+        "A",
+        "三分之二"
+      ],
+      [
+        "B",
+        "百分之五十"
+      ],
+      [
+        "C",
+        "百分之六十"
+      ],
+      [
+        "D",
+        "百分之七十"
+      ]
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 45,
+    "type": "single",
+    "prompt": "《中国共产主义青年团基层组织选举规则》规定，团的支部委员会、总支部委员会、基层委员会书记、副书记一般采用（　）办法选举产生。经同级党组织和上级团组织批准,也可以采用等额选举办法。",
+    "options": [
+      [
+        "A",
+        "差额选举"
+      ],
+      [
+        "B",
+        "等额选举"
+      ],
+      [
+        "C",
+        "不记名投票"
+      ],
+      [
+        "D",
+        "记名投票"
+      ]
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 46,
+    "type": "single",
+    "prompt": "“三会两制一课”是指支部大会、支部委员会、团小组会、团员教育评议制度、团员年度团籍注册制度和团课, 是团的（　）的基本制度。",
+    "options": [
+      [
+        "A",
+        "组织生活"
+      ],
+      [
+        "B",
+        "组织要求"
+      ],
+      [
+        "C",
+        "任务规定"
+      ],
+      [
+        "D",
+        "政治生活"
+      ]
+    ],
+    "answer": "A",
+    "basis": "《中国共产主义青年团基层组织“三会两制一课”实施细则（试行）》第二条。",
+    "link": "https://imr.cas.cn/dj/tw/zdwj_tw/xz_tw/202210/P020251226756208577773.pdf",
+    "repaired": true
+  },
+  {
+    "id": 47,
+    "type": "single",
+    "prompt": "支部大会又称支部团员大会, 是团支部的最高领导机构, 在团支部中享有最高决策权、 选举权和监督权。 支部大会一般每季度召开（　）, 根据工作需要可随时召开。",
+    "options": [
+      [
+        "A",
+        "四次"
+      ],
+      [
+        "B",
+        "两次"
+      ],
+      [
+        "C",
+        "三次"
+      ],
+      [
+        "D",
+        "一次"
+      ]
+    ],
+    "answer": "D"
+  },
+  {
+    "id": 48,
+    "type": "single",
+    "prompt": "支部大会应由支部书记主持, 一般情况下, 参加会议团员应超过支部团员总数的（　）。",
+    "options": [
+      [
+        "A",
+        "三分之二"
+      ],
+      [
+        "B",
+        "四分之三"
+      ],
+      [
+        "C",
+        "二分之一"
+      ],
+      [
+        "D",
+        "五分之四"
+      ]
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 49,
+    "type": "single",
+    "prompt": "支部大会进行表决时, 本支部到会的有表决权的团员超过应到会团员总数的（　）, 方可进行表决。",
+    "options": [
+      [
+        "A",
+        "五分之四"
+      ],
+      [
+        "B",
+        "四分之三"
+      ],
+      [
+        "C",
+        "三分之二"
+      ],
+      [
+        "D",
+        "二分之一"
+      ]
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 50,
+    "type": "single",
+    "prompt": "下列不是团员教育评议的目的的是（　）。",
+    "options": [
+      [
+        "A",
+        "激励团员"
+      ],
+      [
+        "B",
+        "严肃纪律"
+      ],
+      [
+        "C",
+        "整顿队伍"
+      ],
+      [
+        "D",
+        "纯洁组织"
+      ]
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 51,
+    "type": "single",
+    "prompt": "团员评议中优秀等次团员数量应控制在参加评议团员人数的（　）",
+    "options": [
+      [
+        "A",
+        "30%"
+      ],
+      [
+        "B",
+        "25%"
+      ],
+      [
+        "C",
+        "20%"
+      ],
+      [
+        "D",
+        "15%"
+      ]
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 52,
+    "type": "single",
+    "prompt": "（　）是推荐优秀共青团员作党的发展对象的具体条件。",
+    "options": [
+      [
+        "A",
+        "政治思想上先进、道德品行上先进、发挥作用上先进、执行纪律上先进"
+      ],
+      [
+        "B",
+        "政治思想上先进、道德品行上先进、发挥作用上先进、现实表现上先进"
+      ],
+      [
+        "C",
+        "政治思想上先进、道德品行上先进、表率作用上先进、执行纪律上先进"
+      ],
+      [
+        "D",
+        "政治思想上先进、道德品质上先进、发挥作用上先进、执行纪律上先进"
+      ]
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 53,
+    "type": "single",
+    "prompt": "加大对 “青年马克思主义者培养工程”学员的培养力度, 积极推荐优秀“青年马克思主义者培养工程”学员作党的发展对象。学员为入党积极分子的, 培养期间参加的理论学习、（　）等课程应当记入入党积极分子的考察材料中。",
+    "options": [
+      [
+        "A",
+        "思想汇报"
+      ],
+      [
+        "B",
+        "社会实践"
+      ],
+      [
+        "C",
+        "政治鉴定"
+      ],
+      [
+        "D",
+        "培养成绩"
+      ]
+    ],
+    "answer": "B"
+  },
+  {
+    "id": 54,
+    "type": "single",
+    "prompt": "团员教育管理工作应坚持把（　）摆在首位。",
+    "options": [
+      [
+        "A",
+        "政治建设"
+      ],
+      [
+        "B",
+        "经济建设"
+      ],
+      [
+        "C",
+        "文化建设"
+      ],
+      [
+        "D",
+        "生态建设"
+      ]
+    ],
+    "answer": "A",
+    "basis": "《中国共产主义青年团团员教育管理工作条例（试行）》第四条。",
+    "link": "https://www.gqt.org.cn/xxgk/tngz_gfxwj/other_tngz/202210/t20221013_790073.htm",
+    "repaired": true
+  },
+  {
+    "id": 55,
+    "type": "single",
+    "prompt": "加强团员政治教育和政治训练，教育团员始终坚决拥护党的领导，严守政治纪律和政治规矩，坚持（　），在思想上政治上行动上同以习近平同志为核心的党中央保持高度一致。",
+    "options": [
+      [
+        "A",
+        "少数服从多数"
+      ],
+      [
+        "B",
+        "下级组织服从上级组织"
+      ],
+      [
+        "C",
+        "集体领导和个人分工负责相结合"
+      ],
+      [
+        "D",
+        "民主集中制"
+      ]
+    ],
+    "answer": "D"
+  },
+  {
+    "id": 56,
+    "type": "single",
+    "prompt": "（　）是中国特色社会主义最本质特征和最大制度优势。",
+    "options": [
+      [
+        "A",
+        "党的领导"
+      ],
+      [
+        "B",
+        "党的政治建设"
+      ],
+      [
+        "C",
+        "人民当家做主"
+      ],
+      [
+        "D",
+        "人民代表大会制度"
+      ]
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 57,
+    "type": "single",
+    "prompt": "团支部（　）至少召开1次组织生活会，组织生活会一般以团支部团员大会、团支部委员会会议或者团小组会形式召开。",
+    "options": [
+      [
+        "A",
+        "每周"
+      ],
+      [
+        "B",
+        "每月"
+      ],
+      [
+        "C",
+        "每季度"
+      ],
+      [
+        "D",
+        "每年"
+      ]
+    ],
+    "answer": "D"
+  },
+  {
+    "id": 58,
+    "type": "single",
+    "prompt": "团员应当在团组织及其授权的志愿者组织注册成为志愿者。团员每年应当参加志愿服务时长不少于（　）小时，未达标者一般不得参与团内评奖评优。",
+    "options": [
+      [
+        "A",
+        "10"
+      ],
+      [
+        "B",
+        "15"
+      ],
+      [
+        "C",
+        "20"
+      ],
+      [
+        "D",
+        "25"
+      ]
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 59,
+    "type": "single",
+    "prompt": "团员不足（　）人的单位，应当按照地域相邻、行业相近、规模适当、便于管理的原则，成立联合团支部。",
+    "options": [
+      [
+        "A",
+        "3"
+      ],
+      [
+        "B",
+        "5"
+      ],
+      [
+        "C",
+        "7"
+      ],
+      [
+        "D",
+        "9"
+      ]
+    ],
+    "answer": "A"
+  },
+  {
+    "id": 60,
+    "type": "single",
+    "prompt": "团支部团员大会是团支部的议事决策机构，一般（　）召开1次，根据工作需要可以随时召开。",
+    "options": [
+      [
+        "A",
+        "每周"
+      ],
+      [
+        "B",
+        "每月"
+      ],
+      [
+        "C",
+        "每季度"
+      ],
+      [
+        "D",
+        "每年"
+      ]
+    ],
+    "answer": "C"
+  },
+  {
+    "id": 61,
+    "type": "multiple",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议强调，持之以恒推进全面从严治党要遵循的原则包括（　）。",
+    "options": [
+      [
+        "A",
+        "坚持服务使命任务"
+      ],
+      [
+        "B",
+        "坚持以党的政治建设为统领"
+      ],
+      [
+        "C",
+        "坚持全面从严"
+      ],
+      [
+        "D",
+        "坚持守正创新"
+      ]
+    ],
+    "answer": "ABCD",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。七条原则还包括坚持问题导向、坚持以上率下、坚持依规治党。"
+  },
+  {
+    "id": 62,
+    "type": "multiple",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，增强党性要在（　）等方面下功夫。",
+    "options": [
+      [
+        "A",
+        "坚定理想信念"
+      ],
+      [
+        "B",
+        "铸牢对党忠诚"
+      ],
+      [
+        "C",
+        "厚植为民情怀"
+      ],
+      [
+        "D",
+        "保持清正廉洁"
+      ]
+    ],
+    "answer": "ABCD",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。公报还提出坚持实事求是、纯正道德品质。"
+  },
+  {
+    "id": 63,
+    "type": "multiple",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，要建设一支（　）的高素质干部队伍。",
+    "options": [
+      [
+        "A",
+        "政治过硬"
+      ],
+      [
+        "B",
+        "本领高强"
+      ],
+      [
+        "C",
+        "作风优良"
+      ],
+      [
+        "D",
+        "纪律严明"
+      ]
+    ],
+    "answer": "ABCD",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 64,
+    "type": "multiple",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，体系化推进各层级各领域党组织建设要（　）。",
+    "options": [
+      [
+        "A",
+        "强化党组织政治功能和组织功能"
+      ],
+      [
+        "B",
+        "发挥中央和国家机关党组织表率作用"
+      ],
+      [
+        "C",
+        "统筹推进各领域基层党组织建设"
+      ],
+      [
+        "D",
+        "突出抓好新兴领域党的建设"
+      ]
+    ],
+    "answer": "ABCD",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 65,
+    "type": "multiple",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，正风肃纪要（　）。",
+    "options": [
+      [
+        "A",
+        "坚持党性党风党纪一起抓"
+      ],
+      [
+        "B",
+        "正风肃纪反腐相贯通"
+      ],
+      [
+        "C",
+        "锲而不舍落实中央八项规定精神"
+      ],
+      [
+        "D",
+        "走好新时代党的群众路线"
+      ]
+    ],
+    "answer": "ABCD",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 66,
+    "type": "multiple",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，将反腐败斗争进行到底要（　）。",
+    "options": [
+      [
+        "A",
+        "坚持从严惩、精准治、有效防、一体抓"
+      ],
+      [
+        "B",
+        "坚定走好中国特色反腐败之路"
+      ],
+      [
+        "C",
+        "取消对权力运行的制约和监督"
+      ],
+      [
+        "D",
+        "保持惩治腐败高压态势"
+      ]
+    ],
+    "answer": "ABD",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。C项与“加强对权力运行的制约和监督”相悖。"
+  },
+  {
+    "id": 67,
+    "type": "multiple",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，健全党和国家监督体系要（　）。",
+    "options": [
+      [
+        "A",
+        "做实党委（党组）全面监督"
+      ],
+      [
+        "B",
+        "完善纪检监察工作双重领导体制"
+      ],
+      [
+        "C",
+        "推动党内监督同各方面监督深度融合、高效联动"
+      ],
+      [
+        "D",
+        "弱化巡视监督作用"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》：“发挥巡视综合监督利剑作用。”D项与之相悖。"
+  },
+  {
+    "id": 68,
+    "type": "multiple",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，持之以恒推进全面从严治党的部署包括（　）。",
+    "options": [
+      [
+        "A",
+        "增强共产党人的党性"
+      ],
+      [
+        "B",
+        "严格贯彻执行民主集中制"
+      ],
+      [
+        "C",
+        "减少党的组织生活"
+      ],
+      [
+        "D",
+        "锻造堪当民族复兴重任的高素质干部队伍"
+      ]
+    ],
+    "answer": "ABD",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。C项与“建设上下贯通、执行有力的严密组织体系”相悖。"
+  },
+  {
+    "id": 69,
+    "type": "multiple",
+    "prompt": "《关于加强党建带团建工作的意见》提出的指导思想包括（　）。",
+    "options": [
+      [
+        "A",
+        "习近平新时代中国特色社会主义思想"
+      ],
+      [
+        "B",
+        "习近平总书记关于党的建设的重要思想"
+      ],
+      [
+        "C",
+        "习近平总书记关于青年工作的重要思想"
+      ],
+      [
+        "D",
+        "西方政党建设理论"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "新华社2026年3月20日电。D项与该意见的指导思想相悖。"
+  },
+  {
+    "id": 70,
+    "type": "multiple",
+    "prompt": "《关于加强党建带团建工作的意见》要求各级党委（党组）加强对共青团和青年工作的集中统一领导，具体包括（　）。",
+    "options": [
+      [
+        "A",
+        "深刻领悟“两个确立”的决定性意义"
+      ],
+      [
+        "B",
+        "督促团的领导机关严格执行重大事项请示报告制度"
+      ],
+      [
+        "C",
+        "代替共青团决定日常工作"
+      ],
+      [
+        "D",
+        "加强团干部政治能力培养"
+      ]
+    ],
+    "answer": "ABD",
+    "basis": "新华社2026年3月20日电。C项与“共青团要自觉坚持党的领导，落实党建带团建工作部署”相悖。"
+  },
+  {
+    "id": 71,
+    "type": "multiple",
+    "prompt": "《关于加强党建带团建工作的意见》关于团干部队伍建设的要求包括（　）。",
+    "options": [
+      [
+        "A",
+        "建设素质过硬的团干部队伍"
+      ],
+      [
+        "B",
+        "健全符合群团组织特点的干部管理方式"
+      ],
+      [
+        "C",
+        "实行专职、挂职、兼职相结合的管理制度"
+      ],
+      [
+        "D",
+        "团干部全部由党组织直接委任"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "新华社2026年3月20日电。D项与“专职、挂职、兼职相结合”相悖。"
+  },
+  {
+    "id": 72,
+    "type": "multiple",
+    "prompt": "《关于加强党建带团建工作的意见》关于团员和团干部教育培训的要求包括（　）。",
+    "options": [
+      [
+        "A",
+        "健全团干部和团员教育培训工作体系"
+      ],
+      [
+        "B",
+        "支持共青团常态化开展团干部教育培训"
+      ],
+      [
+        "C",
+        "以自学完全代替集中培训"
+      ],
+      [
+        "D",
+        "切实加强团员教育培训"
+      ]
+    ],
+    "answer": "ABD",
+    "basis": "新华社2026年3月20日电。"
+  },
+  {
+    "id": 73,
+    "type": "multiple",
+    "prompt": "《关于加强党建带团建工作的意见》要求，发挥青年党员和团组织作用，要（　）。",
+    "options": [
+      [
+        "A",
+        "充分发挥青年党员在团的工作和建设中的骨干作用"
+      ],
+      [
+        "B",
+        "注重从优秀团员中培养和发展党员"
+      ],
+      [
+        "C",
+        "支持共青团团结带领青年发挥生力军和突击队作用"
+      ],
+      [
+        "D",
+        "取消共青团的助手和后备军作用"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "新华社2026年3月20日电。D项错误：共青团是党的助手和后备军，这一性质由团章规定。"
+  },
+  {
+    "id": 74,
+    "type": "multiple",
+    "prompt": "《关于加强党建带团建工作的意见》对团干部作风提出的要求包括（　）。",
+    "options": [
+      [
+        "A",
+        "不尚虚谈、多务实功"
+      ],
+      [
+        "B",
+        "多为青年计、少为自己谋"
+      ],
+      [
+        "C",
+        "以个人升迁为主要目标"
+      ],
+      [
+        "D",
+        "涵养积极健康向上的思想作风、工作作风、生活作风"
+      ]
+    ],
+    "answer": "ABD",
+    "basis": "新华社2026年3月20日电。C项与“加强团干部正确事业观、成长观教育”相悖。"
+  },
+  {
+    "id": 75,
+    "type": "multiple",
+    "prompt": "《关于加强党建带团建工作的意见》关于全面从严管团治团的要求包括（　）。",
+    "options": [
+      [
+        "A",
+        "突出政治要求，净化政治生态"
+      ],
+      [
+        "B",
+        "严格团员教育管理"
+      ],
+      [
+        "C",
+        "严肃团的组织生活、严格纪律执行"
+      ],
+      [
+        "D",
+        "放松对团员的日常管理"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "新华社2026年3月20日电。D项与“全面从严管团治团”相悖。"
+  },
+  {
+    "id": 76,
+    "type": "multiple",
+    "prompt": "《关于加强党建带团建工作的意见》提出，要大力培育（　）的新时代好青年。",
+    "options": [
+      [
+        "A",
+        "有理想"
+      ],
+      [
+        "B",
+        "敢担当"
+      ],
+      [
+        "C",
+        "肯享受"
+      ],
+      [
+        "D",
+        "能吃苦"
+      ]
+    ],
+    "answer": "ABD",
+    "basis": "新华社2026年3月20日电：“大力培育有理想、敢担当、能吃苦、肯奋斗的新时代好青年。”C项应为“肯奋斗”。"
+  },
+  {
+    "id": 77,
+    "type": "multiple",
+    "prompt": "党的二十届四中全会提出的“十五五”时期经济社会发展主要目标包括（　）。",
+    "options": [
+      [
+        "A",
+        "高质量发展取得显著成效"
+      ],
+      [
+        "B",
+        "科技自立自强水平大幅提高"
+      ],
+      [
+        "C",
+        "社会文明程度明显提升"
+      ],
+      [
+        "D",
+        "全面建成社会主义现代化强国"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》第（6）条列出七项主要目标。D项是到本世纪中叶的奋斗目标。"
+  },
+  {
+    "id": 78,
+    "type": "multiple",
+    "prompt": "党的二十届四中全会提出，“十五五”时期经济社会发展必须遵循的原则包括（　）。",
+    "options": [
+      [
+        "A",
+        "坚持党的全面领导"
+      ],
+      [
+        "B",
+        "坚持人民至上"
+      ],
+      [
+        "C",
+        "坚持有效市场和有为政府相结合"
+      ],
+      [
+        "D",
+        "坚持统筹发展和安全"
+      ]
+    ],
+    "answer": "ABCD",
+    "basis": "《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》第（5）条。"
+  },
+  {
+    "id": 79,
+    "type": "multiple",
+    "prompt": "党的二十届四中全会提出，加快建设（　），保持制造业合理比重。",
+    "options": [
+      [
+        "A",
+        "制造强国"
+      ],
+      [
+        "B",
+        "质量强国"
+      ],
+      [
+        "C",
+        "金融强国"
+      ],
+      [
+        "D",
+        "航天强国"
+      ]
+    ],
+    "answer": "ABD",
+    "basis": "《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》第三部分。金融强国的提法见第六部分，不属于该句表述。"
+  },
+  {
+    "id": 80,
+    "type": "multiple",
+    "prompt": "党的二十届四中全会提出，前瞻布局未来产业，推动（　）等成为新的经济增长点。",
+    "options": [
+      [
+        "A",
+        "量子科技"
+      ],
+      [
+        "B",
+        "生物制造"
+      ],
+      [
+        "C",
+        "氢能和核聚变能"
+      ],
+      [
+        "D",
+        "传统燃油汽车"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》第（8）条。"
+  },
+  {
+    "id": 81,
+    "type": "multiple",
+    "prompt": "党的二十届四中全会提出，坚持扩大内需这个战略基点，坚持（　）紧密结合。",
+    "options": [
+      [
+        "A",
+        "惠民生和促消费"
+      ],
+      [
+        "B",
+        "投资于物和投资于人"
+      ],
+      [
+        "C",
+        "扩内需和稳外贸"
+      ],
+      [
+        "D",
+        "稳增长和防风险"
+      ]
+    ],
+    "answer": "AB",
+    "basis": "《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》第五部分导语。"
+  },
+  {
+    "id": 82,
+    "type": "multiple",
+    "prompt": "下列属于2025年我国重大会议的有（　）。",
+    "options": [
+      [
+        "A",
+        "党的二十届四中全会"
+      ],
+      [
+        "B",
+        "中央经济工作会议"
+      ],
+      [
+        "C",
+        "北京冬奥会"
+      ],
+      [
+        "D",
+        "党的二十届五中全会"
+      ]
+    ],
+    "answer": "AB",
+    "basis": "2025年10月20日至23日召开二十届四中全会；2025年12月10日至11日召开中央经济工作会议。北京冬奥会于2022年举办；二十届五中全会于2026年10月召开。"
+  },
+  {
+    "id": 83,
+    "type": "multiple",
+    "prompt": "“三会两制一课”包括（　）。",
+    "options": [
+      [
+        "A",
+        "支部大会"
+      ],
+      [
+        "B",
+        "支部委员会"
+      ],
+      [
+        "C",
+        "团小组会"
+      ],
+      [
+        "D",
+        "团员年度团籍注册制度"
+      ]
+    ],
+    "answer": "ABCD",
+    "basis": "《中国共产主义青年团基层组织“三会两制一课”制度实施细则》。"
+  },
+  {
+    "id": 84,
+    "type": "multiple",
+    "prompt": "团章规定，下列属于团员必须履行的义务的有（　）。",
+    "options": [
+      [
+        "A",
+        "执行团的决议"
+      ],
+      [
+        "B",
+        "积极参加志愿服务"
+      ],
+      [
+        "C",
+        "可以不参加团的组织生活"
+      ],
+      [
+        "D",
+        "自觉遵守国家的法律法规和团的纪律"
+      ]
+    ],
+    "answer": "ABD",
+    "basis": "《中国共产主义青年团章程》第一章“团员”第二条。C项与团员义务相悖。"
+  },
+  {
+    "id": 85,
+    "type": "multiple",
+    "prompt": "团章规定，下列属于团员享有的权利的有（　）。",
+    "options": [
+      [
+        "A",
+        "参加团的有关会议和团组织开展的各类活动"
+      ],
+      [
+        "B",
+        "在团内有选举权、被选举权和表决权"
+      ],
+      [
+        "C",
+        "对团的工作提出建议"
+      ],
+      [
+        "D",
+        "自由退团后仍保留团籍"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "《中国共产主义青年团章程》第一章“团员”第三条。D项错误：退团后不再保留团籍。"
+  },
+  {
+    "id": 86,
+    "type": "multiple",
+    "prompt": "团章规定，团的基层组织包括（　）。",
+    "options": [
+      [
+        "A",
+        "团的基层委员会"
+      ],
+      [
+        "B",
+        "团的总支部委员会"
+      ],
+      [
+        "C",
+        "团的支部委员会"
+      ],
+      [
+        "D",
+        "团的中央委员会"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "《中国共产主义青年团章程》第五章“团的基层组织”。团的中央委员会不属于基层组织。"
+  },
+  {
+    "id": 87,
+    "type": "multiple",
+    "prompt": "根据《中国共产主义青年团基层组织选举工作条例》，下列说法正确的有（　）。",
+    "options": [
+      [
+        "A",
+        "大、中学校学生支部委员会每届任期1年"
+      ],
+      [
+        "B",
+        "其他支部委员会每届任期3年"
+      ],
+      [
+        "C",
+        "团的基层委员会每届任期3年至5年"
+      ],
+      [
+        "D",
+        "委员会书记、副书记采用差额选举办法选举产生"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "《中国共产主义青年团基层组织选举工作条例》第三条、第二十二条。D项错误：书记、副书记采用等额选举。"
+  },
+  {
+    "id": 88,
+    "type": "multiple",
+    "prompt": "团章规定，中国共产主义青年团的行动指南包括（　）。",
+    "options": [
+      [
+        "A",
+        "马克思列宁主义"
+      ],
+      [
+        "B",
+        "毛泽东思想"
+      ],
+      [
+        "C",
+        "邓小平理论"
+      ],
+      [
+        "D",
+        "“三个代表”重要思想"
+      ]
+    ],
+    "answer": "ABCD",
+    "basis": "《中国共产主义青年团章程》总则，行动指南还包括科学发展观、习近平新时代中国特色社会主义思想。"
+  },
+  {
+    "id": 89,
+    "type": "multiple",
+    "prompt": "根据团费管理有关规定，下列说法正确的有（　）。",
+    "options": [
+      [
+        "A",
+        "保留团籍的共产党员自取得预备党员资格起，可以不交纳团费"
+      ],
+      [
+        "B",
+        "从按新工资标准领取工资的当月起，以新的工资收入为基数，按照规定标准交纳团费"
+      ],
+      [
+        "C",
+        "无力交纳团费的团员，经批准可以少交或免交"
+      ],
+      [
+        "D",
+        "团员可以自行决定不交纳团费"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "《关于团费收缴、使用和管理的规定》。D项错误：交纳团费是团员应尽的义务，不得自行决定不交。"
+  },
+  {
+    "id": 90,
+    "type": "multiple",
+    "prompt": "团章规定，团支部应当做好的工作包括（　）。",
+    "options": [
+      [
+        "A",
+        "组织团员青年学习党的理论和路线方针政策"
+      ],
+      [
+        "B",
+        "加强对团员的教育、管理和监督"
+      ],
+      [
+        "C",
+        "了解和反映团员青年的意见和要求"
+      ],
+      [
+        "D",
+        "代替党组织审批发展党员"
+      ]
+    ],
+    "answer": "ABC",
+    "basis": "《中国共产主义青年团章程》第五章“团的基层组织”。D项不属于团支部职权。"
+  },
+  {
+    "id": 91,
+    "type": "judge",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议出席的候补中央委员为147人。（　）",
+    "answer": "×",
+    "basis": "公报载明：出席全会的有中央委员162人，候补中央委员117人。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 92,
+    "type": "judge",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议由中央书记处主持。（　）",
+    "answer": "×",
+    "basis": "公报载明：全会由中央政治局主持，中央委员会总书记习近平发表重要讲话。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 93,
+    "type": "judge",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议强调，坚持严的基调不动摇。（　）",
+    "answer": "√",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》：“坚持严的基调不动摇，健全全面从严治党体系。”",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 94,
+    "type": "judge",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，党面临的“四大考验”和“四种危险”已经得到根本解决。（　）",
+    "answer": "×",
+    "basis": "公报指出，党面临的“四大考验”和“四种危险”是长期的、复杂的、严峻的。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 95,
+    "type": "judge",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，深入学习贯彻全会精神是一般性工作安排。（　）",
+    "answer": "×",
+    "basis": "公报指出，深入学习贯彻全会精神是当前和今后一个时期全党的重大政治任务。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 96,
+    "type": "judge",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，新时代全面从严治党从根本上扭转了管党治党宽松软状况。（　）",
+    "answer": "√",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 97,
+    "type": "judge",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，扩大“一把手”自由裁量权。（　）",
+    "answer": "×",
+    "basis": "公报要求严格执行领导班子决策议事规则，规范“一把手”履职用权。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 98,
+    "type": "judge",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，推动依法治国和以德治国有机统一。（　）",
+    "answer": "×",
+    "basis": "公报提出推动依法治国和依规治党有机统一。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 99,
+    "type": "judge",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议强调，持续增强党的政治领导力、思想引领力、群众组织力、经济推动力。（　）",
+    "answer": "×",
+    "basis": "公报表述为“持续增强党的政治领导力、思想引领力、群众组织力、社会号召力”。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 100,
+    "type": "judge",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，要扭住管党治党责任制这个“总开关”。（　）",
+    "answer": "×",
+    "basis": "公报表述为“必须扭住管党治党责任制‘牛鼻子’”。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 101,
+    "type": "judge",
+    "prompt": "《关于加强党建带团建工作的意见》由中共中央办公厅于2026年3月印发。（　）",
+    "answer": "√",
+    "basis": "新华社2026年3月20日电。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 102,
+    "type": "judge",
+    "prompt": "《关于加强党建带团建工作的意见》要求，收缩团组织的覆盖范围。（　）",
+    "answer": "×",
+    "basis": "意见要求支持共青团紧跟党的组织建设步伐，不断巩固拓展团组织的有效覆盖。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 103,
+    "type": "judge",
+    "prompt": "《关于加强党建带团建工作的意见》要求，指导团组织建立团干部为个人谋发展工作机制。（　）",
+    "answer": "×",
+    "basis": "意见要求指导团组织建立团干部为青年办实事工作机制。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 104,
+    "type": "judge",
+    "prompt": "《关于加强党建带团建工作的意见》要求，加强团干部正确事业观、成长观教育。（　）",
+    "answer": "√",
+    "basis": "新华社2026年3月20日电。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 105,
+    "type": "judge",
+    "prompt": "《关于加强党建带团建工作的意见》要求，规范开展青年文明号评选等工作。（　）",
+    "answer": "×",
+    "basis": "意见要求规范开展青年五四奖章暨新时代青年先锋奖评选等工作。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 106,
+    "type": "judge",
+    "prompt": "《关于加强党建带团建工作的意见》要求，坚持和完善团干部定期向上级机关汇报的工作机制。（　）",
+    "answer": "×",
+    "basis": "意见要求坚持和完善密切联系青年工作机制。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 107,
+    "type": "judge",
+    "prompt": "《关于加强党建带团建工作的意见》要求，共青团要自觉坚持党的领导，落实党建带团建工作部署。（　）",
+    "answer": "√",
+    "basis": "新华社2026年3月20日电：“共青团要自觉坚持党的领导，落实党建带团建工作部署，全面加强团的工作和建设。”",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 108,
+    "type": "judge",
+    "prompt": "《关于加强党建带团建工作的意见》要求，健全落实以学铸魂、以学增智、以学正风、以学谋利长效机制。（　）",
+    "answer": "×",
+    "basis": "意见要求健全落实以学铸魂、以学增智、以学正风、以学促干长效机制。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 109,
+    "type": "judge",
+    "prompt": "《关于加强党建带团建工作的意见》要求，指导共青团深入贯彻中央八项规定及其实施细则精神。（　）",
+    "answer": "√",
+    "basis": "新华社2026年3月20日电。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 110,
+    "type": "judge",
+    "prompt": "《关于加强党建带团建工作的意见》强调，各级党组织要认真履行党建带团建责任。（　）",
+    "answer": "√",
+    "basis": "新华社2026年3月20日电。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 111,
+    "type": "judge",
+    "prompt": "1936年10月红军三大主力会师，标志着红军长征胜利结束。（　）",
+    "answer": "√",
+    "basis": "1936年10月，红军三大主力胜利会师，长征胜利结束。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 112,
+    "type": "judge",
+    "prompt": "中国共产党第一次全国代表大会于1921年7月在北京召开。（　）",
+    "answer": "×",
+    "basis": "中共一大1921年7月在上海开幕。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 113,
+    "type": "judge",
+    "prompt": "中共一大最后一天的会议转移到湖北武汉东湖的一条游船上举行。（　）",
+    "answer": "×",
+    "basis": "中共一大因受到密探注意，最后一天会议转移到浙江嘉兴南湖的游船上举行，通过了党的第一个纲领。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 114,
+    "type": "judge",
+    "prompt": "中国人民抗日战争取得完全胜利是在1949年。（　）",
+    "answer": "×",
+    "basis": "抗日战争于1945年取得胜利：8月15日日本宣布无条件投降，9月2日签署投降书。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 115,
+    "type": "judge",
+    "prompt": "中国社会主义青年团第一次全国代表大会在上海召开。（　）",
+    "answer": "×",
+    "basis": "1922年5月，中国社会主义青年团第一次全国代表大会在广州召开，标志中国共青团正式成立。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 116,
+    "type": "judge",
+    "prompt": "五四运动是中国新民主主义革命的开端。（　）",
+    "answer": "√",
+    "basis": "五四运动爆发于1919年5月4日，是中国新民主主义革命的开端。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 117,
+    "type": "judge",
+    "prompt": "团支部书记由上级团组织直接任命产生。（　）",
+    "answer": "×",
+    "basis": "团支部委员会由团员大会选举产生，团支部书记、副书记由支部委员会选举产生，见《中国共产主义青年团章程》第五章“团的基层组织”和《中国共产主义青年团基层组织选举工作条例》。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 118,
+    "type": "judge",
+    "prompt": "中国共产主义青年团第十九次全国代表大会于2023年召开。（　）",
+    "answer": "√",
+    "basis": "2023年6月，中国共产主义青年团第十九次全国代表大会在北京召开，《中国共产主义青年团章程》于6月22日经大会部分修改通过。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 119,
+    "type": "judge",
+    "prompt": "2026年《政府工作报告》提出，城镇新增就业1200万人以上。（　）",
+    "answer": "√",
+    "basis": "2026年《政府工作报告》。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 120,
+    "type": "judge",
+    "prompt": "2026年《政府工作报告》提出，居民消费价格涨幅3%左右。（　）",
+    "answer": "×",
+    "basis": "2026年《政府工作报告》提出居民消费价格涨幅2%左右。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 121,
+    "type": "judge",
+    "prompt": "2026年《政府工作报告》提出，粮食产量1.4万亿斤左右。（　）",
+    "answer": "√",
+    "basis": "2026年《政府工作报告》。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 122,
+    "type": "judge",
+    "prompt": "2026年《政府工作报告》提出，单位国内生产总值二氧化碳排放降低3.8%左右。（　）",
+    "answer": "√",
+    "basis": "2026年《政府工作报告》。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 123,
+    "type": "judge",
+    "prompt": "团章规定，发展团员，必须把政治标准放在首位。（　）",
+    "answer": "√",
+    "basis": "《中国共产主义青年团章程》第一章“团员”第四条。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 124,
+    "type": "judge",
+    "prompt": "团章规定，新团员必须参加入团仪式，在团旗下进行入团宣誓。（　）",
+    "answer": "√",
+    "basis": "《中国共产主义青年团章程》第一章“团员”第五条。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 125,
+    "type": "judge",
+    "prompt": "团员没有正当理由连续六个月不交纳团费、不过团的组织生活，按自行脱团处理。（　）",
+    "answer": "√",
+    "basis": "《中国共产主义青年团章程》第一章“团员”第八条；《关于团费收缴、使用和管理的规定》。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 126,
+    "type": "judge",
+    "prompt": "支部大会进行表决时，到会的有表决权的团员超过应到会团员总数的二分之一即可表决。（　）",
+    "answer": "×",
+    "basis": "须超过应到会团员总数的三分之二，见《“三会两制一课”制度实施细则》。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 127,
+    "type": "judge",
+    "prompt": "团员教育评议中，优秀等次团员数量控制在参加评议团员人数的30%以内。（　）",
+    "answer": "√",
+    "basis": "《中国共产主义青年团基层组织“三会两制一课”制度实施细则》。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 128,
+    "type": "judge",
+    "prompt": "团支部每年至少召开1次组织生活会。（　）",
+    "answer": "√",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 129,
+    "type": "judge",
+    "prompt": "团章规定，团支部是团的基础组织。（　）",
+    "answer": "√",
+    "basis": "《中国共产主义青年团章程》第五章“团的基层组织”。",
+    "options": [
+      [
+        "√",
+        "正确"
+      ],
+      [
+        "×",
+        "错误"
+      ]
+    ]
+  },
+  {
+    "id": 130,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议指出，中国共产党在革命、建设、改革中先后把党的建设作为伟大工程、______。",
+    "answer": "新的伟大工程",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》：“在革命、建设、改革中先后把党的建设作为伟大工程、新的伟大工程。”"
+  },
+  {
+    "id": 131,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，坚持制度治党、______。",
+    "answer": "依规治党",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》：“坚持制度治党、依规治党。”"
+  },
+  {
+    "id": 132,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，建设上下贯通、______的严密组织体系。",
+    "answer": "执行有力",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 133,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，发挥______综合监督利剑作用。",
+    "answer": "巡视",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 134,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，更加注重______、系统施治。",
+    "answer": "标本兼治",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 135,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议强调，坚持严的基调不动摇，健全______体系。",
+    "answer": "全面从严治党",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 136,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，坚定走好______的反腐败之路。",
+    "answer": "中国特色",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 137,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议强调，不断实现党的自我净化、自我完善、自我革新、______。",
+    "answer": "自我提高",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 138,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，坚决打好反腐败斗争攻坚战、持久战、______。",
+    "answer": "总体战",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 139,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，用党的优良传统和______涵养党性。",
+    "answer": "中华优秀传统文化",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 140,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议提出，完善干部______机制。",
+    "answer": "考核评价"
+  },
+  {
+    "id": 141,
+    "type": "fill",
+    "prompt": "中国共产党第二十届中央委员会第五次全体会议强调，坚持和加强______集中统一领导。",
+    "answer": "党中央（党的）",
+    "basis": "《中国共产党第二十届中央委员会第五次全体会议公报》。"
+  },
+  {
+    "id": 142,
+    "type": "fill",
+    "prompt": "2026年3月，中共中央办公厅印发了《关于加强______工作的意见》。",
+    "answer": "党建带团建",
+    "basis": "新华社2026年3月20日电。"
+  },
+  {
+    "id": 143,
+    "type": "fill",
+    "prompt": "《关于加强党建带团建工作的意见》要求，带动共青团全面从严______。",
+    "answer": "管团治团",
+    "basis": "新华社2026年3月20日电：“全面从严管团治团。”"
+  },
+  {
+    "id": 144,
+    "type": "fill",
+    "prompt": "《关于加强党建带团建工作的意见》要求，切实发挥好党联系青年的______作用。",
+    "answer": "桥梁纽带",
+    "basis": "新华社2026年3月20日电。"
+  },
+  {
+    "id": 145,
+    "type": "fill",
+    "prompt": "《关于加强党建带团建工作的意见》要求，坚持和完善密切联系青年工作机制，走好______。",
+    "answer": "网上群众路线",
+    "basis": "新华社2026年3月20日电。"
+  },
+  {
+    "id": 146,
+    "type": "fill",
+    "prompt": "《关于加强党建带团建工作的意见》要求，把习近平总书记关于青年工作的重要思想列入各级党委（党组）______学习内容。",
+    "answer": "理论学习中心组",
+    "basis": "新华社2026年3月20日电。"
+  },
+  {
+    "id": 147,
+    "type": "fill",
+    "prompt": "“十五五”规划期为______年。",
+    "answer": "2026—2030",
+    "basis": "“十四五”为2021—2025年，“十五五”相应为2026—2030年，共五年。"
+  },
+  {
+    "id": 148,
+    "type": "fill",
+    "prompt": "中国人民抗日战争取得完全胜利是在______年。",
+    "answer": "1945",
+    "basis": "1945年日本宣布无条件投降并签署投降书，抗日战争取得胜利。"
+  },
+  {
+    "id": 149,
+    "type": "fill",
+    "prompt": "1935年1月，遵义会议在贵州______召开。",
+    "answer": "遵义",
+    "basis": "遵义会议于1935年1月在贵州遵义召开。"
+  },
+  {
+    "id": 150,
+    "type": "fill",
+    "prompt": "中国共产主义青年团成立于______年。",
+    "answer": "1922",
+    "basis": "1922年5月，中国社会主义青年团第一次全国代表大会在广州召开。"
+  },
+  {
+    "id": 151,
+    "type": "fill",
+    "prompt": "2026年《政府工作报告》提出，城镇调查失业率______左右。",
+    "answer": "5.5%",
+    "basis": "2026年《政府工作报告》主要预期目标之一。"
+  },
+  {
+    "id": 152,
+    "type": "fill",
+    "prompt": "2025年9月3日，纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会在______举行。",
+    "answer": "北京",
+    "basis": "2025年9月3日大会在北京举行。"
+  },
+  {
+    "id": 153,
+    "type": "fill",
+    "prompt": "团章规定，年龄在______周岁以上、______周岁以下的中国青年，可以申请加入中国共产主义青年团。",
+    "answer": "十四、二十八",
+    "basis": "《中国共产主义青年团章程》第一章“团员”第一条。"
+  },
+  {
+    "id": 154,
+    "type": "fill",
+    "prompt": "团章规定，留团察看的时间为______。",
+    "answer": "六个月或一年",
+    "basis": "《中国共产主义青年团章程》第六章“团的纪律”。"
+  },
+  {
+    "id": 155,
+    "type": "fill",
+    "prompt": "“三会两制一课”中的“两制”是指团员教育评议制度和______制度。",
+    "answer": "团员年度团籍注册",
+    "basis": "《中国共产主义青年团基层组织“三会两制一课”制度实施细则》。"
+  },
+  {
+    "id": 156,
+    "type": "fill",
+    "prompt": "支部大会一般每______召开一次。",
+    "answer": "季度",
+    "basis": "《中国共产主义青年团基层组织“三会两制一课”制度实施细则》。"
+  },
+  {
+    "id": 157,
+    "type": "fill",
+    "prompt": "中国共产主义青年团团歌为《______》。",
+    "answer": "光荣啊，中国共青团",
+    "basis": "《中国共产主义青年团章程》第七章“团旗、团徽、团歌”。"
+  },
+  {
+    "id": 158,
+    "type": "fill",
+    "prompt": "团章规定，团员______人以上的单位，应当建立团的基层组织。",
+    "answer": "三（3）",
+    "basis": "《中国共产主义青年团章程》第五章“团的基层组织”。"
+  },
+  {
+    "id": 159,
+    "type": "fill",
+    "prompt": "团章规定，团的全国代表大会每______年举行一次。",
+    "answer": "五",
+    "basis": "《中国共产主义青年团章程》第三章。"
+  },
+  {
+    "id": 160,
+    "type": "fill",
+    "prompt": "团的基层组织选举中，差额不少于应选人数的___。",
+    "answer": "20%",
+    "basis": "《中国共产主义青年团基层组织选举工作条例》第十一条。"
+  },
+  {
+    "id": 161,
+    "type": "fill",
+    "prompt": "《中国共产主义青年团章程》于______年修改通过。",
+    "answer": "2023",
+    "basis": "2023年6月22日经中国共产主义青年团第十九次全国代表大会部分修改通过。"
+  },
+  {
+    "id": 162,
+    "type": "fill",
+    "prompt": "团章规定，中国共产主义青年团团旗旗面为红色，左上角缀黄色五角星，周围环绕______。",
+    "answer": "黄色圆圈",
+    "basis": "《中国共产主义青年团章程》第七章“团旗、团徽、团歌”。"
+  },
+  {
+    "id": 163,
+    "type": "fill",
+    "prompt": "中国共产主义青年团团徽的绶带上写有“______”五个字。",
+    "answer": "中国共青团",
+    "basis": "《中国共产主义青年团章程》第七章“团旗、团徽、团歌”。"
+  },
+  {
+    "id": 164,
+    "type": "fill",
+    "prompt": "团的经费来源主要包括团员交纳的______、党和政府以及企事业单位的拨款等。",
+    "answer": "团费",
+    "basis": "《中国共产主义青年团章程》第九章“团的经费”。"
+  },
+  {
+    "id": 165,
+    "type": "fill",
+    "prompt": "团章规定，团员在留团察看期间没有______、选举权和被选举权。",
+    "answer": "表决权",
+    "basis": "《中国共产主义青年团章程》第六章“团的纪律”。"
+  },
+  {
+    "id": 166,
+    "type": "fill",
+    "prompt": "团员由一个基层组织转移到另一个基层组织，应当在“______”系统中办理组织关系转接。",
+    "answer": "智慧团建",
+    "basis": "《中国共产主义青年团章程》第一章“团员”第六条；具体业务在“智慧团建”系统中办理。"
+  },
+  {
+    "id": 167,
+    "type": "fill",
+    "prompt": "推荐优秀共青团员作党的发展对象，应当政治思想上先进、道德品行上先进、发挥作用上先进、______上先进。",
+    "answer": "执行纪律",
+    "basis": "《共青团推优入党工作实施办法》。"
+  },
+  {
+    "id": 168,
+    "type": "fill",
+    "prompt": "团支部委员会一般由______人组成，设书记一人，可以设副书记一人。",
+    "answer": "3至5",
+    "basis": "《中国共产主义青年团章程》第五章“团的基层组织”。"
+  },
+  {
+    "id": 169,
+    "type": "fill",
+    "prompt": "团的组织对团员作出处分决定，应当坚持______、治病救人的方针。",
+    "answer": "惩前毖后",
+    "basis": "《中国共产主义青年团章程》第六章“团的纪律”。"
+  }
+];
+</script>
+<script>
+'use strict';
+
+const questionTypes = {
+  single: '单选题',
+  multiple: '多选题',
+  judge: '判断题',
+  fill: '填空题'
+};
+const filters = { all: '全部题目', ...questionTypes, mistakes: '错题本' };
+const storageKey = 'hsd-tzbsj-practice-3-v1';
+const get = id => document.getElementById(id);
+const questionView = get('question');
+const filterBar = get('filters');
+const orderBar = get('sequence');
+const mapPanel = get('map');
+const mapToggle = get('toggle-map');
+
+let storageAvailable = true;
+let saved = {};
+try {
+  saved = JSON.parse(localStorage.getItem(storageKey) || '{}') || {};
+} catch {
+  storageAvailable = false;
+}
+const results = saved.results || {};
+const positions = saved.positions || {};
+const drafts = new Map();
+const retries = new Set();
+let filter = Object.hasOwn(filters, saved.filter) ? saved.filter : 'all';
+let order = saved.order === 'random' ? 'random' : 'ordered';
+let queue = [];
+let index = 0;
+let summary = false;
+
+function save() {
+  try {
+    localStorage.setItem(storageKey, JSON.stringify({ results, positions, filter, order }));
+    storageAvailable = true;
+  } catch {
+    storageAvailable = false;
+  }
+  get('storage-note').textContent = storageAvailable
+    ? '练习进度和错题保存在当前浏览器。'
+    : '当前浏览器无法保存进度，关闭或刷新页面后会清空。';
+}
+
+function element(tag, className, content) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (content !== undefined) node.textContent = content;
+  return node;
+}
+
+function button(text, className, handler) {
+  const node = element('button', className, text);
+  node.type = 'button';
+  if (handler) node.addEventListener('click', handler);
+  return node;
+}
+
+function matches(question, scope) {
+  if (scope === 'all') return true;
+  if (scope === 'mistakes') return results[question.id]?.correct === false;
+  return question.type === scope;
+}
+
+function makeQueue(preferredId) {
+  queue = questions.filter(question => matches(question, filter));
+  if (order === 'random') {
+    for (let current = queue.length - 1; current > 0; current--) {
+      const other = Math.floor(Math.random() * (current + 1));
+      [queue[current], queue[other]] = [queue[other], queue[current]];
+    }
+  }
+  index = Math.max(0, queue.findIndex(question => question.id === preferredId));
+  summary = false;
+}
+
+function chooseFilter(scope) {
+  if (filter === scope) return;
+  filter = scope;
+  makeQueue(positions[filter]);
+  render();
+}
+
+function chooseOrder(nextOrder) {
+  if (order === nextOrder) return;
+  order = nextOrder;
+  makeQueue(order === 'ordered' ? queue[index]?.id : undefined);
+  render();
+}
+
+function goTo(nextIndex) {
+  index = nextIndex;
+  summary = false;
+  render();
+  get('prompt')?.focus();
+}
+
+function updateOverview() {
+  const answered = Object.keys(results).length;
+  const correct = Object.values(results).filter(result => result.correct).length;
+  get('answered-total').textContent = String(answered);
+  get('total-label').textContent = ` / ${questions.length} 题`;
+  get('score').textContent = `答对 ${correct} 题`;
+  get('progress').max = questions.length;
+  get('progress').value = answered;
+  for (const item of filterBar.querySelectorAll('button')) {
+    const scope = item.dataset.filter;
+    item.setAttribute('aria-pressed', String(scope === filter));
+    item.lastElementChild.textContent = String(questions.filter(question => matches(question, scope)).length);
+  }
+  for (const item of orderBar.querySelectorAll('button')) {
+    item.setAttribute('aria-pressed', String(item.dataset.order === order));
+  }
+}
+
+function renderMap() {
+  const grid = get('map-grid');
+  if (mapPanel.hidden) return;
+  const items = queue.map((question, nextIndex) => {
+    const attempt = results[question.id];
+    const status = attempt?.correct === true ? '答对' : attempt ? '错题' : '未做';
+    const className = attempt?.correct === true ? 'correct' : attempt ? 'wrong' : '';
+    const item = button(question.id, className, () => {
+      toggleMap(false);
+      goTo(nextIndex);
+    });
+    item.setAttribute('aria-label', `第 ${question.id} 题，${status}`);
+    if (!summary && nextIndex === index) item.setAttribute('aria-current', 'true');
+    return item;
+  });
+  grid.replaceChildren(...items);
+}
+
+function toggleMap(open) {
+  mapPanel.hidden = !open;
+  mapToggle.setAttribute('aria-expanded', String(open));
+  renderMap();
+}
+
+function normalize(value) {
+  return value.normalize('NFKC')
+    .toLowerCase()
+    .replace(/[\s,、，。！!？?《》“”「」]/gu, '')
+    .replace(/[—–－~～至到]/gu, '-');
+}
+
+const fillAliases = {
+  141: ['党中央', '党的'],
+  147: ['2026-2030', '2026年-2030年', '2026年-2030'],
+  148: ['1945年'],
+  150: ['1922年'],
+  152: ['北京市'],
+  154: ['6个月或一年', '六个月或1年', '6个月或1年'],
+  158: ['三', '3'],
+  159: ['5'],
+  160: ['百分之二十'],
+  161: ['2023年'],
+  168: ['三至五', '3-5', '三-五']
+};
+
+function isCorrect(question, values) {
+  if (question.options) return [...values].sort().join('') === question.answer;
+  const normalized = values.map(normalize);
+  if (question.id === 153) {
+    return ['十四', '14'].includes(normalized[0]) && ['二十八', '28'].includes(normalized[1]);
+  }
+  return [question.answer, ...(fillAliases[question.id] || [])]
+    .some(answer => normalize(answer) === normalized[0]);
+}
+
+function answerText(question) {
+  if (question.type === 'fill') return question.answer;
+  return question.options
+    .filter(([key]) => question.answer.includes(key))
+    .map(([key, value]) => `${key} ${value}`)
+    .join('；');
+}
+
+function renderFeedback(panel, question, attempt, revealed) {
+  panel.hidden = !attempt && !revealed;
+  panel.replaceChildren();
+  panel.className = 'feedback';
+  if (panel.hidden) return;
+  if (attempt) {
+    panel.classList.add(attempt.correct ? 'correct' : 'wrong');
+    panel.append(element('strong', '', attempt.correct ? '回答正确' : '回答有误'));
+  }
+  panel.append(element('p', '', `参考答案　${answerText(question)}`));
+  if (question.repaired) panel.append(element('p', '', '原稿题干有缺失，此题依据以下团务文件补全。'));
+  if (question.basis) panel.append(element('p', '', `依据　${question.basis}`));
+  if (question.link) {
+    const source = element('a', '', '查看原文');
+    source.href = question.link;
+    source.target = '_blank';
+    source.rel = 'noopener';
+    panel.append(element('p'));
+    panel.lastElementChild.append(source);
+  }
+}
+
+function renderQuestion(question) {
+  const body = element('div', 'question-body');
+  const meta = element('div', 'question-meta');
+  meta.append(element('span', 'kind', questionTypes[question.type]), element('span', 'position', `${index + 1} / ${queue.length}`));
+  const title = element('h2', 'prompt');
+  title.id = 'prompt';
+  title.tabIndex = -1;
+  title.append(element('small', '', `第 ${question.id} 题`), document.createTextNode(question.prompt));
+  body.append(meta, title);
+  if (question.type === 'multiple') body.append(element('p', 'hint', '请选择所有正确选项。'));
+
+  const form = element('form');
+  const fields = element('div', question.options ? 'option-list' : 'fill-fields');
+  fields.setAttribute('role', 'group');
+  fields.setAttribute('aria-labelledby', 'prompt');
+  const actions = element('div', 'action-row');
+  const submit = button('提交答案', 'button primary');
+  submit.type = 'submit';
+  const reveal = button('查看答案', 'button outline');
+  const retry = button('重新作答', 'button outline');
+  actions.append(submit, reveal, retry);
+  const feedback = element('div', 'feedback');
+  feedback.setAttribute('aria-live', 'polite');
+  form.append(fields, actions, feedback);
+  body.append(form);
+  const nav = element('div', 'navigation');
+  const previous = button('上一题', 'button outline', () => goTo(index - 1));
+  previous.disabled = index === 0;
+  const last = index === queue.length - 1;
+  const next = button(last ? '本组概览' : '下一题', 'button outline', () => {
+    if (last) {
+      summary = true;
+      render();
+      get('prompt')?.focus();
+    } else {
+      goTo(index + 1);
+    }
+  });
+  nav.append(previous, next);
+  questionView.replaceChildren(body, nav);
+
+  let attempt = retries.has(question.id) ? undefined : results[question.id];
+  let revealed = false;
+  let values = [...(drafts.get(question.id) || attempt?.values || [])];
+  const available = () => values.length === controls.length && values.every(value => value?.trim());
+  const controls = [];
+  if (question.options) {
+    for (const [key, name] of question.options) {
+      const choice = button('', 'option', () => {
+        if (question.type === 'multiple') {
+          values = values.includes(key) ? values.filter(value => value !== key) : [...values, key];
+        } else {
+          values = [key];
+        }
+        drafts.set(question.id, values);
+        sync();
+      });
+      choice.dataset.key = key;
+      choice.append(element('span', 'option-letter', key), element('span', '', name));
+      controls.push(choice);
+      fields.append(choice);
+    }
+  } else {
+    const count = (question.prompt.match(/_+/g) || []).length;
+    for (let number = 0; number < count; number++) {
+      const label = element('label', '', count === 1 ? '填入答案' : `第 ${number + 1} 空`);
+      const input = element('input');
+      input.type = 'text';
+      input.autocomplete = 'off';
+      input.value = values[number] || '';
+      input.addEventListener('input', () => {
+        values = controls.map(control => control.value);
+        drafts.set(question.id, values);
+        sync();
+      });
+      controls.push(input);
+      label.append(input);
+      fields.append(label);
+    }
+  }
+
+  function sync() {
+    const resolved = Boolean(attempt || revealed);
+    submit.hidden = resolved;
+    submit.disabled = question.options ? values.length === 0 : !available();
+    reveal.hidden = resolved;
+    retry.hidden = !resolved;
+    for (const control of controls) {
+      if (!question.options) {
+        control.readOnly = resolved;
+        continue;
+      }
+      const key = control.dataset.key;
+      const selected = values.includes(key);
+      const right = question.answer.includes(key);
+      control.setAttribute('aria-pressed', String(selected));
+      control.disabled = resolved;
+      control.classList.toggle('correct', resolved && right);
+      control.classList.toggle('wrong', resolved && Boolean(attempt) && selected && !right);
+    }
+  }
+
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    if (submit.disabled || attempt || revealed) return;
+    attempt = { values, correct: isCorrect(question, values) };
+    results[question.id] = attempt;
+    retries.delete(question.id);
+    drafts.delete(question.id);
+    sync();
+    renderFeedback(feedback, question, attempt, revealed);
+    updateOverview();
+    renderMap();
+    save();
+  });
+  reveal.addEventListener('click', () => {
+    revealed = true;
+    sync();
+    renderFeedback(feedback, question, attempt, revealed);
+  });
+  retry.addEventListener('click', () => {
+    retries.add(question.id);
+    attempt = undefined;
+    revealed = false;
+    values = [];
+    drafts.delete(question.id);
+    if (!question.options) for (const input of controls) input.value = '';
+    sync();
+    renderFeedback(feedback, question, attempt, revealed);
+    controls[0]?.focus();
+  });
+  sync();
+  renderFeedback(feedback, question, attempt, revealed);
+}
+
+function renderSummary() {
+  const area = element('div', 'empty');
+  const title = element('h2', '', queue.length ? '本组练习概览' : '错题本是空的');
+  title.id = 'prompt';
+  title.tabIndex = -1;
+  area.append(title);
+  if (!queue.length) {
+    area.append(element('p', '', '答错的题目会自动收录在这里。'), button('查看全部题目', 'button primary', () => chooseFilter('all')));
+  } else {
+    const answered = queue.filter(question => results[question.id]).length;
+    const correct = queue.filter(question => results[question.id]?.correct).length;
+    const firstUnanswered = queue.findIndex(question => !results[question.id]);
+    const actions = element('div', 'action-row');
+    area.append(element('p', '', `共 ${queue.length} 题，已做 ${answered} 题，答对 ${correct} 题。`), actions);
+    if (firstUnanswered >= 0) {
+      actions.append(button('继续未做题目', 'button primary', () => goTo(firstUnanswered)));
+    }
+    actions.append(button('回到本组第一题', 'button outline', () => goTo(0)));
+    if (filter !== 'mistakes' && Object.values(results).some(result => !result.correct)) {
+      actions.append(button('复习错题', 'button outline', () => chooseFilter('mistakes')));
+    }
+  }
+  questionView.replaceChildren(area);
+}
+
+function render() {
+  updateOverview();
+  mapToggle.disabled = queue.length === 0;
+  if (mapToggle.disabled) toggleMap(false);
+  if (!summary && queue[index]) {
+    const question = queue[index];
+    positions[filter] = question.id;
+    renderQuestion(question);
+  } else {
+    renderSummary();
+  }
+  renderMap();
+  save();
+}
+
+for (const [scope, label] of Object.entries(filters)) {
+  const item = button(label, 'filter', () => chooseFilter(scope));
+  item.dataset.filter = scope;
+  item.append(element('span', 'filter-count'));
+  filterBar.append(item);
+}
+for (const item of orderBar.querySelectorAll('button')) {
+  item.addEventListener('click', () => chooseOrder(item.dataset.order));
+}
+mapToggle.addEventListener('click', () => toggleMap(mapPanel.hidden));
+makeQueue(positions[filter]);
+render();
+</script>
+</body>
+</html>
