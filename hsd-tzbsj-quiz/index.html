@@ -97,6 +97,7 @@ progress::-moz-progress-bar { background: #4960c8; }
 .button.outline { border-color: var(--line); }
 .button.primary { background: var(--accent); color: #fff; }
 .button.primary:hover:not(:disabled) { background: #293e93; }
+.restart { margin-top: 12px; width: 100%; }
 .feedback { margin-top: 16px; padding: 13px 15px; background: #f3f6ff; border: 1px solid #d8e1f9; border-radius: 9px; font-size: .94rem; line-height: 1.65; overflow-wrap: anywhere; }
 .feedback.correct { background: var(--green-pale); border-color: #b7decf; }
 .feedback.wrong { background: var(--red-pale); border-color: #f0c5c1; }
@@ -132,6 +133,7 @@ progress::-moz-progress-bar { background: #4960c8; }
   .progress-section h2 { margin: 0; }
   .progress-numbers strong { font-size: 1rem; }
   progress { margin: 0; }
+  .restart { grid-column: 1 / -1; justify-self: start; margin: 0; width: auto; min-height: 36px; }
   .card { border-radius: 12px; }
   .question-body, .empty { padding: 17px 15px; }
   .navigation, .map { padding-inline: 15px; }
@@ -162,6 +164,7 @@ progress::-moz-progress-bar { background: #4960c8; }
         <div class="progress-numbers"><strong id="answered-total">0</strong><span id="total-label"> / 169 题</span></div>
         <progress id="progress" max="169" value="0" aria-label="全部题目的完成进度"></progress>
         <div id="score" class="muted">答对 0 题</div>
+        <button class="button outline restart" id="restart" type="button">本组重做</button>
       </div>
     </aside>
     <section class="exercise" aria-label="答题区">
@@ -3217,9 +3220,10 @@ const questions = [
   {
     "id": 149,
     "type": "fill",
-    "prompt": "1935年1月，遵义会议在贵州______召开。",
+    "prompt": "1935年1月15日至17日，中共中央政治局在贵州______召开扩大会议。",
     "answer": "遵义",
-    "basis": "遵义会议于1935年1月在贵州遵义召开。"
+    "basis": "遵义会议于1935年1月15日至17日在贵州遵义召开。",
+    "link": "https://ha.mof.gov.cn/zt/djzc/djzl/201505/t20150513_1231209.htm"
   },
   {
     "id": 150,
@@ -3380,6 +3384,7 @@ const filterBar = get('filters');
 const orderBar = get('sequence');
 const mapPanel = get('map');
 const mapToggle = get('toggle-map');
+const restartButton = get('restart');
 
 let storageAvailable = true;
 let saved = {};
@@ -3389,9 +3394,11 @@ try {
   storageAvailable = false;
 }
 const results = saved.results || {};
+const mistakes = saved.mistakes || Object.fromEntries(
+  Object.entries(results).filter(([, result]) => !result.correct).map(([id]) => [id, true])
+);
 const positions = saved.positions || {};
 const drafts = new Map();
-const retries = new Set();
 let filter = Object.hasOwn(filters, saved.filter) ? saved.filter : 'all';
 let order = saved.order === 'random' ? 'random' : 'ordered';
 let queue = [];
@@ -3400,7 +3407,7 @@ let summary = false;
 
 function save() {
   try {
-    localStorage.setItem(storageKey, JSON.stringify({ results, positions, filter, order }));
+    localStorage.setItem(storageKey, JSON.stringify({ results, mistakes, positions, filter, order }));
     storageAvailable = true;
   } catch {
     storageAvailable = false;
@@ -3426,7 +3433,7 @@ function button(text, className, handler) {
 
 function matches(question, scope) {
   if (scope === 'all') return true;
-  if (scope === 'mistakes') return results[question.id]?.correct === false;
+  if (scope === 'mistakes') return Boolean(mistakes[question.id]);
   return question.type === scope;
 }
 
@@ -3459,6 +3466,18 @@ function chooseOrder(nextOrder) {
 function goTo(nextIndex) {
   index = nextIndex;
   summary = false;
+  render();
+  get('prompt')?.focus();
+}
+
+function restartPractice() {
+  for (const question of questions.filter(question => matches(question, filter))) {
+    delete results[question.id];
+    drafts.delete(question.id);
+  }
+  delete positions[filter];
+  makeQueue();
+  toggleMap(false);
   render();
   get('prompt')?.focus();
 }
@@ -3607,9 +3626,9 @@ function renderQuestion(question) {
   nav.append(previous, next);
   questionView.replaceChildren(body, nav);
 
-  let attempt = retries.has(question.id) ? undefined : results[question.id];
+  let attempt;
   let revealed = false;
-  let values = [...(drafts.get(question.id) || attempt?.values || [])];
+  let values = [...(drafts.get(question.id) || [])];
   const available = () => values.length === controls.length && values.every(value => value?.trim());
   const controls = [];
   if (question.options) {
@@ -3673,7 +3692,8 @@ function renderQuestion(question) {
     if (submit.disabled || attempt || revealed) return;
     attempt = { values, correct: isCorrect(question, values) };
     results[question.id] = attempt;
-    retries.delete(question.id);
+    if (attempt.correct) delete mistakes[question.id];
+    else mistakes[question.id] = true;
     drafts.delete(question.id);
     sync();
     renderFeedback(feedback, question, attempt, revealed);
@@ -3687,7 +3707,6 @@ function renderQuestion(question) {
     renderFeedback(feedback, question, attempt, revealed);
   });
   retry.addEventListener('click', () => {
-    retries.add(question.id);
     attempt = undefined;
     revealed = false;
     values = [];
@@ -3715,11 +3734,11 @@ function renderSummary() {
     const firstUnanswered = queue.findIndex(question => !results[question.id]);
     const actions = element('div', 'action-row');
     area.append(element('p', '', `共 ${queue.length} 题，已做 ${answered} 题，答对 ${correct} 题。`), actions);
+    actions.append(button('再做一遍', 'button primary', restartPractice));
     if (firstUnanswered >= 0) {
-      actions.append(button('继续未做题目', 'button primary', () => goTo(firstUnanswered)));
+      actions.append(button('继续未做题目', 'button outline', () => goTo(firstUnanswered)));
     }
-    actions.append(button('回到本组第一题', 'button outline', () => goTo(0)));
-    if (filter !== 'mistakes' && Object.values(results).some(result => !result.correct)) {
+    if (filter !== 'mistakes' && Object.keys(mistakes).length > 0) {
       actions.append(button('复习错题', 'button outline', () => chooseFilter('mistakes')));
     }
   }
@@ -3729,6 +3748,7 @@ function renderSummary() {
 function render() {
   updateOverview();
   mapToggle.disabled = queue.length === 0;
+  restartButton.disabled = queue.length === 0 || (filter === 'mistakes' && Object.keys(mistakes).length === 0);
   if (mapToggle.disabled) toggleMap(false);
   if (!summary && queue[index]) {
     const question = queue[index];
@@ -3751,6 +3771,7 @@ for (const item of orderBar.querySelectorAll('button')) {
   item.addEventListener('click', () => chooseOrder(item.dataset.order));
 }
 mapToggle.addEventListener('click', () => toggleMap(mapPanel.hidden));
+restartButton.addEventListener('click', restartPractice);
 makeQueue(positions[filter]);
 render();
 </script>
